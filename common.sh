@@ -37,7 +37,7 @@ filesize() {
   if onMac; then
     stat -f "%z" $1
   else
-    stat --printf="%s" $1
+    stat -c%s $1
   fi
 }
 
